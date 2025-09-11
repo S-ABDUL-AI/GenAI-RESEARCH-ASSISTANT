@@ -12,15 +12,20 @@ WORKDIR /app
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# Install system dependencies
+# Install system dependencies (only what's needed for pdfplumber + Pillow)
 RUN apt-get update && apt-get install -y \
     build-essential \
-    libpoppler-cpp-dev \
-    pkg-config \
-    python3-dev \
+    libjpeg-dev \
+    zlib1g-dev \
+    libfreetype6-dev \
+    liblcms2-dev \
+    libtiff5-dev \
+    libwebp-dev \
+    tcl8.6-dev tk8.6-dev python3-tk \
+    ghostscript \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements
+# Copy requirements first (for caching)
 COPY requirements.txt .
 
 # Install Python dependencies
@@ -34,4 +39,3 @@ EXPOSE 8501
 
 # Streamlit entrypoint
 CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
-
