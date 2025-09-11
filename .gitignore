@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+*.log
+*.pot
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Streamlit secrets (⚠️ Do not upload your API keys)
+.streamlit/secrets.toml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter / notebooks (if added later)
+.ipynb_checkpoints
+
+# VSCode / IDE settings
+.vscode/
+.idea/
+
+# Build / cache
+build/
+dist/
+*.egg-info/
