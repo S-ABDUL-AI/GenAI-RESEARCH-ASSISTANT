@@ -32,9 +32,16 @@ pip install -r requirements.txt
 
 Run the app with Streamlit:
 streamlit run app.py
-
-
 Open in browser → http://localhost:8501
+
+🐳 Run with Docker
+We’ve included a Dockerfile for easy deployment.
+1️⃣ Build the image
+docker build -t genai-research-assistant .
+2️⃣ Run the container
+docker run -p 8501:8501 genai-research-assistant
+Now open 👉 http://localhost:8501
+
 
 🔑 API Keys
 
