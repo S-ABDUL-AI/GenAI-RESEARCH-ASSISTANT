@@ -1,6 +1,6 @@
 # ================================
 # 📘 GenAI Research Assistant
-# Requirements (Pinned Versions)
+# Requirements
 # ================================
 
 # Core
@@ -20,4 +20,6 @@ pandas==2.2.3
 
 # Optional utils
 tqdm==4.66.5
+
+# (Only needed on Windows for some builds)
 python-dotenv==1.0.1
