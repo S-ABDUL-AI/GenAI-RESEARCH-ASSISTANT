@@ -10,7 +10,7 @@ streamlit==1.39.0
 openai==1.51.2
 
 # PDF Processing
-PyMuPDF==1.24.10   # provides 'fitz'
+pdfplumber==0.11.4
 
 # Web Scraping
 requests==2.32.3
@@ -22,3 +22,4 @@ pandas==2.2.3
 # Utilities
 tqdm==4.66.5
 python-dotenv==1.0.1
+
