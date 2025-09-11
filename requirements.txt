@@ -9,8 +9,7 @@ openai==1.51.2
 
 # PDF processing
 PyPDF2==3.0.1
-pdfplumber==0.11.4
-PyMuPDF==1.24.10   # <-- needed for 'fitz'
+PyMuPDF==1.24.10   # <-- required for 'fitz'
 
 # Web scraping
 requests==2.32.3
@@ -22,3 +21,8 @@ pandas==2.2.3
 # Optional utils
 tqdm==4.66.5
 python-dotenv==1.0.1
+
+# LangChain ecosystem (for RAG / embeddings)
+langchain==0.3.2
+langchain-community==0.3.1
+faiss-cpu==1.7.4
