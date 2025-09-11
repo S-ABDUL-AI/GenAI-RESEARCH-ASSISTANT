@@ -1,4 +1,4 @@
-import fitz  # PyMuPDF
+import pdfplumber
 import requests
 from bs4 import BeautifulSoup
 from openai import OpenAI
@@ -44,8 +44,12 @@ class ResearchAssistant:
     # LOADERS
     # -------------------------------
     def load_pdf(self, path):
-        doc = fitz.open(path)
-        self.text = "\n".join([page.get_text() for page in doc])
+        text = ""
+        with pdfplumber.open(path) as pdf:
+            for page in pdf.pages:
+                page_text = page.extract_text() or ""
+                text += page_text + "\n"
+        self.text = text
 
     def load_url(self, url):
         r = requests.get(url)
