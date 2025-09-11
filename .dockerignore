@@ -1,0 +1,32 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# Ignore virtual environment
+.venv/
+env/
+venv/
+
+# Ignore git files
+.git/
+.gitignore
+
+# Ignore OS / editor files
+.DS_Store
+*.swp
+*.swo
+
+# Ignore logs
+*.log
+
+# Ignore build / dist
+build/
+dist/
+*.egg-info/
+
+# Ignore PDFs or large uploads (optional)
+*.pdf
+uploads/
