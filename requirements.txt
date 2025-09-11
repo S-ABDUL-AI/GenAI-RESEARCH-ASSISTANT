@@ -3,26 +3,22 @@
 # Requirements (Pinned Versions)
 # ================================
 
-# Core
+# Core App
 streamlit==1.39.0
+
+# OpenAI API Client
 openai==1.51.2
 
-# PDF processing
-PyPDF2==3.0.1
-PyMuPDF==1.24.10   # <-- required for 'fitz'
+# PDF Processing
+PyMuPDF==1.24.10   # provides 'fitz'
 
-# Web scraping
+# Web Scraping
 requests==2.32.3
 beautifulsoup4==4.12.3
 
-# Data handling
+# Data Handling (optional, useful for future)
 pandas==2.2.3
 
-# Optional utils
+# Utilities
 tqdm==4.66.5
 python-dotenv==1.0.1
-
-# LangChain ecosystem (for RAG / embeddings)
-langchain==0.3.2
-langchain-community==0.3.1
-faiss-cpu==1.7.4
