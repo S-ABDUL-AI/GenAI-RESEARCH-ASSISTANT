@@ -4,8 +4,7 @@
 # ================================
 
 # Core App
-streamlit==1.39.0
-
+streamlit>=1.43.0,<2
 # OpenAI API Client
 openai==1.51.2
 
